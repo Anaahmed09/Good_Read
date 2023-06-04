@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+   background-color: beige;
+  }
+
+  .login-form {
+    margin-right: 0px;
+    border: none;
+  }
+  .container-fluid {
+    margin-right: 100px;
+  }
+  
