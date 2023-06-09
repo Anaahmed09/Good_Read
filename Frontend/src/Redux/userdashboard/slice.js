@@ -21,6 +21,23 @@ export const fetchApiData = createAsyncThunk("userDashboard/fetchData", async ()
   }
 });
 
+export const createRateAndStatus = createAsyncThunk("userDashboard/create", async (data) => {
+  try {
+    const response = await fetch(`${baseURL}${nestedRoute}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${authToken}`,
+      },
+      body: JSON.stringify(data),
+    });
+    const res = await response.json();
+    return res;
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
 export const updateRateOrStatus = createAsyncThunk("userDashboard/update", async (data) => {
   try {
     const { id, rate, status, user, book } = data;
@@ -76,6 +93,18 @@ const apiDataSlice = createSlice({
         state.message = action.payload;
       })
       .addCase(updateRateOrStatus.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase(createRateAndStatus.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(createRateAndStatus.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.message = action.payload;
+      })
+      .addCase(createRateAndStatus.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });

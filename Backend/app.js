@@ -20,7 +20,7 @@ const upload = require("./utils/multer-upload");
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "http://localhost:3001"],
   })
 );
 

@@ -200,9 +200,6 @@ const AuthorTable = () => {
                   <TableCell align="center">{author.firstName}</TableCell>
                   <TableCell align="center">{author.lastName}</TableCell>
                   <TableCell className="d-flex align-items-center gap-2 justify-content-center">
-                    <MKButton variant="gradient" color="warning">
-                      <i className="bi bi-pencil"></i>
-                    </MKButton>
                     <MKButton
                       variant="gradient"
                       color="error"

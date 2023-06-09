@@ -41,8 +41,8 @@ export default function CategoryDetails() {
                     description={book.authorId.name}
                     action={{
                       type: "internal",
-                      route: "/pages/blogs/author",
-                      // route: `${book._id}/details`,
+                      // route: "/pages/blogs/author",
+                      route: `/books/${book._id}`,
                       label: "Read More",
                     }}
                   />

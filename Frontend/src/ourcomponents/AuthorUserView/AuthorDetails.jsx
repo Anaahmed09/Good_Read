@@ -65,7 +65,7 @@ const AuthorDetails = () => {
                           variant="gradient"
                           color="info"
                           onClick={() => {
-                            navigate(`/categories/${item._id}/books`);
+                            navigate(`/books/${item._id}`);
                           }}
                         >
                           {item?.name}

@@ -87,6 +87,7 @@ class bookController {
       const id = req.params.id;
       bookModel
         .findOne({ _id: id })
+        .populate([{ path: "authorId" }, { path: "categoryId" }])
         .then((book) => {
           res.json({
             message: "your book",

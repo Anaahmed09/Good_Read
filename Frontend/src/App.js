@@ -16,6 +16,7 @@ import UserRegister from "./components/registeration/UserRegister";
 import UserDashboard from "./components/Dashboard/user/index.jsx";
 import Categories from "components/category/Categories";
 import CategoryDetails from "components/category/CategoryDetails";
+import BookDetails from "components/bookDetails.jsx";
 import Book from "./components/Book";
 import BookForm from "./components/BookForm";
 import BookAdmin from "./components/bookAdmin";
@@ -100,6 +101,7 @@ export default function App() {
         <Route path="/categories" Component={AllCategories} />
         <Route path="/categories/groups" Component={Categories} />
         <Route path="/categories/:id/books" Component={CategoryDetails} />
+        <Route path="/books/:id" Component={BookDetails} />
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admins" element={<Adminpage />} />

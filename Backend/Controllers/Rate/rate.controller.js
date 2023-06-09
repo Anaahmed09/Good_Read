@@ -48,9 +48,9 @@ const getOne = async (req, res) => {
 };
 
 const post = async (req, res) => {
-  const { rate, user, book, status } = req.body;
+  // const { rate, user, book, status } = req.body;
   try {
-    const newRate = new Rate({ rate, user, book, status });
+    const newRate = new Rate(req.body);
     await newRate.save();
     res.status(201).json(newRate);
   } catch (err) {
