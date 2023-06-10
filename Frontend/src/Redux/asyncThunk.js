@@ -14,7 +14,7 @@ export const findAll = createAsyncThunk("category/findAll", async () => {
       })
     ).data;
   } catch (error) {
-    throw new Error(`Error in fetching data form categories api ${error.message}`)
+    throw new Error(`Error in fetching data form categories api ${error.message}`);
   }
 });
 
@@ -30,10 +30,8 @@ export const addCategory = createAsyncThunk("category/addCategory", async ({ nam
         },
       }
     );
-    
   } catch (error) {
-    throw new Error(`Error in add category api ${error.message}`)
-    
+    throw new Error(`Error in add category api ${error.message}`);
   }
 });
 
@@ -52,7 +50,7 @@ export const editCategory = createAsyncThunk("category/editCategory", async (cat
       }
     );
   } catch (error) {
-    throw new Error(`Error in edit category api ${error.message}`)
+    throw new Error(`Error in edit category api ${error.message}`);
   }
 });
 
@@ -65,7 +63,7 @@ export const deleteCategory = createAsyncThunk("category/deleteCategory", async 
       },
     });
   } catch (error) {
-    throw new Error(`Error in delete category api ${error.message}`)
+    throw new Error(`Error in delete category api ${error.message}`);
   }
 });
 
@@ -80,6 +78,6 @@ export const categoryDetails = createAsyncThunk("category/findAllBooks", async (
       })
     ).data;
   } catch (error) {
-    throw new Error(`Error in fetching all books api ${error.message}`)
+    throw new Error(`Error in fetching all books api ${error.message}`);
   }
 });
