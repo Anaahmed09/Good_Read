@@ -16,7 +16,7 @@ const upload = require("./utils/multer-upload");
 
 app.use(
   cors({
-    origin: ["https://goodread-api.onrender.com"],
+    origin: ["https://goodread.onrender.com"],
   })
 );
 

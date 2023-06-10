@@ -40,7 +40,7 @@ const AuthorTable = () => {
   }, []);
 
   const fetchAuthors = () => {
-    fetch("https://goodread-api.onrender.com/api/v1/authors")
+    fetch("https://technotes-api.onrender.com/api/v1/authors")
       .then((res) => res.json())
       .then((authorsData) => {
         setAuthors(authorsData.data.authors);
@@ -50,7 +50,7 @@ const AuthorTable = () => {
 
   // deleteing authors
   const deleteAuthor = (id) => {
-    fetch(`https://goodread-api.onrender.com/api/v1/authors/${id}`, {
+    fetch(`https://technotes-api.onrender.com/api/v1/authors/${id}`, {
       method: "DELETE",
     }).then((response) => {
       if (response.ok) {
@@ -70,7 +70,7 @@ const AuthorTable = () => {
     formDataToSend.append("image", formData.image);
 
     try {
-      const response = await fetch("https://goodread-api.onrender.com/api/v1/authors", {
+      const response = await fetch("https://technotes-api.onrender.com/api/v1/authors", {
         method: "POST",
         body: formDataToSend,
       });

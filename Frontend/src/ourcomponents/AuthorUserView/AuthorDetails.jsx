@@ -14,7 +14,7 @@ const AuthorDetails = () => {
   const navigate = useNavigate();
   useEffect(() => {
     async function fetchAuthor() {
-      const response = await axios.get(`https://goodread-api.onrender.com/api/v1/authors/${id}`);
+      const response = await axios.get(`https://technotes-api.onrender.com/api/v1/authors/${id}`);
       console.log(response.data.data.author);
 
       setAuthor(response.data.data.author);

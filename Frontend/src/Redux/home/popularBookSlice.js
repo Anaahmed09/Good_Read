@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-const baseURL = "https://goodread-api.onrender.com";
+const baseURL = "https://technotes-api.onrender.com";
 const nestedRoute = "/books/popularBooksAndAuthor";
 
 export const popularBooksSlice = createAsyncThunk("popularBooksSection/popularBooks", async () => {
