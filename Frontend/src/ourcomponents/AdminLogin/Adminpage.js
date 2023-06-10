@@ -9,7 +9,7 @@ function Adminpage() {
   useEffect(() => {
     const authToken = localStorage.getItem("authToken");
     const admin_id = localStorage.getItem("admin_id");
-    fetch("http://127.0.0.1:3500/admins/", {
+    fetch("https://goodread-api.onrender.com/admins/", {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },

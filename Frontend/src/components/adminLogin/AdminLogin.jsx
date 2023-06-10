@@ -37,7 +37,7 @@ function LoginPage() {
       email: username,
       password: password,
     };
-    fetch("http://127.0.0.1:3500/Adminlogin", {
+    fetch("https://goodread-api.onrender.com/Adminlogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
