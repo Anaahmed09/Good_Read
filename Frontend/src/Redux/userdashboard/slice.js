@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-const baseURL = "http://localhost:3500";
+const baseURL = "https://goodread-api.onrender.com";
 const nestedRoute = "/rates";
 const authToken = localStorage.getItem("authToken");
 const user_id = localStorage.getItem("user_id");
